@@ -30,7 +30,7 @@ export default css`
       margin: 0;
       padding: 0;
       font-size: 1rem;
-      font-weight: lighter;
+      font-weight: 500;
     }
 
     h1 {

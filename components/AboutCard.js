@@ -45,22 +45,17 @@ const AboutCard = () => {
 export default AboutCard;
 
 const IconLink = ({ href, icon, ...props }) => {
-  // const handleClick = (e) => {
-  //   console.log({ nagigateTo: href });
-  //   e.preventDefault();
-  //   if (window && href.includes('http')) {
-  //     return window.open(href, '__blank');
-  //   } else {
-  //     // Navigate with next router
-  //   }
-  // };
-
   return (
-    <Link href={href}>
-      <StyledIconButton className="styled-icon" target="__blank" {...props}>
-        {icon}
-      </StyledIconButton>
-    </Link>
+    // <Link href={href}>
+    <StyledIconButton
+      href={href}
+      className="styled-icon"
+      target="__blank"
+      {...props}
+    >
+      {icon}
+    </StyledIconButton>
+    // </Link>
   );
 };
 
@@ -80,7 +75,6 @@ const StyledIconButton = styled.a`
     }
     &:focus {
       outline: none;
-      box-shadow: 0 0 0 1px var(--color-secondary);
       color: var(--color-secondary);
     }
   }

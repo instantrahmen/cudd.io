@@ -9,7 +9,6 @@ const Home = () => (
   <PageContainer>
     <Head>
       <title>Erika Cudd</title>
-      <link rel="icon" href="/favicon.ico" />
     </Head>
 
     <img src={avatar} alt="Erika" className="avatar" />
@@ -32,7 +31,13 @@ const PageContainer = styled(Layout)`
     width: 200px;
     height: auto;
   }
-  h1 {
-    font-size: 5rem;
+
+  .content {
+    h1 {
+      font-weight: 300 !important;
+    }
+    h2 {
+      font-weight: lighter !important;
+    }
   }
 `;
