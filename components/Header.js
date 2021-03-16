@@ -69,7 +69,7 @@ const Header = ({ className }) => {
         <nav>
           <ul>
             {navLinks.map((link) => (
-              <li>
+              <li key={`${link.name}-${link.href}`}>
                 <NavLink href={link.href}>{link.name}</NavLink>
               </li>
             ))}
@@ -97,7 +97,7 @@ const MenuDrawer = ({ isOpen, onClose, btnRef, navLinks }) => (
             <nav>
               <ul>
                 {navLinks.map((link) => (
-                  <li>
+                  <li key={`${link.name}-${link.href}`}>
                     <NavLink href={link.href}>{link.name}</NavLink>
                   </li>
                 ))}
