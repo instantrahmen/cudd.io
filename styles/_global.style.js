@@ -32,6 +32,7 @@ export default css`
       padding: 0;
       font-size: 1rem;
       font-weight: 500;
+      line-height: 1em;
     }
 
     h1 {

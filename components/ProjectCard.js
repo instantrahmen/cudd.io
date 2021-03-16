@@ -40,6 +40,12 @@ const ProjectCard = ({ project, ...props }) => {
           <div>Loading...</div>
         )}
       </div>
+
+      <ul className="tags">
+        {project.tags.map((tag) => (
+          <div className="tag">{tag}</div>
+        ))}
+      </ul>
     </ProjectCardContainer>
   );
 };
@@ -60,17 +66,10 @@ const IconLink = ({ href, icon, disabled = false, ...props }) => {
   );
 };
 
-const HeaderImage = styled.figure`
-  width: 100%;
-  height: 200px;
-  background: black;
-  color: white;
-`;
-
 const StyledIconButton = styled.a`
   &.styled-icon {
     background: none;
-    color: #ccca;
+    color: var(--color-white);
     padding-bottom: 0.5rem;
     margin-bottom: 0.4rem;
     font-size: 1.5rem;
@@ -89,10 +88,10 @@ const StyledIconButton = styled.a`
     ${({ disabled }) =>
       disabled &&
       css`
-        color: #ccc4;
+        color: #ccc6;
         cursor: not-allowed;
         &:hover {
-          color: #ccc4;
+          color: #ccc6;
         }
       `}
   }
@@ -111,6 +110,8 @@ const ProjectCardContainer = styled.div`
   color: var(--color-darkest-grey);
   box-sizing: border-box;
   position: relative;
+  display: flex;
+  flex-direction: column;
 
   * {
     box-sizing: border-box;
@@ -143,13 +144,43 @@ const ProjectCardContainer = styled.div`
 
   .content {
     margin: 1.5rem 2rem;
+    flex: 1;
+  }
+
+  .tags {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    box-sizing: border-box;
+    grid-gap: 0.2rem;
+
+    width: 100%;
+    justify-content: space-between;
+
+    .tag {
+      color: white;
+      background: var(--color-primary);
+      padding: 0.3rem;
+      transition: 150ms ease-in-out;
+
+      &:hover {
+        background: var(--color-secondary);
+      }
+    }
   }
 
   .links {
     padding: 0;
-    justify-content: space-evenly;
+    justify-content: center;
     width: 100%;
     box-sizing: border-box;
+
+    & > * {
+      padding: 0 1.5rem 0.5rem 1.5rem;
+    }
   }
 `;
 

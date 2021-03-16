@@ -50,6 +50,7 @@ const PageContainer = styled(Layout)`
     }
     h2 {
       font-weight: lighter !important;
+      margin-top: 1rem !important;
     }
   }
 `;
