@@ -1,15 +1,19 @@
 import React from 'react';
 import Avatar from './Avatar';
 import styled from 'styled-components';
-import Link from 'next/link';
-import { ButtonGroup, Heading, IconButton } from '@chakra-ui/react';
+import { ButtonGroup, Heading } from '@chakra-ui/react';
 import { FaTwitter, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
+import { fromBelow, generateAnimationProps } from '../utils/variants';
 
 const AboutCard = () => {
   return (
-    <AboutCardContainer>
+    <AboutCardContainer {...generateAnimationProps(fromBelow)}>
       <div className="header">
-        <Avatar className="avatar"></Avatar>
+        <AnimatePresence>
+          <Avatar className="avatar" small></Avatar>
+        </AnimatePresence>
         <Heading as="h2">Erika Cudd</Heading>
       </div>
       <ButtonGroup className="links">
@@ -80,7 +84,7 @@ const StyledIconButton = styled.a`
   }
 `;
 
-const AboutCardContainer = styled.div`
+const AboutCardContainer = styled(motion.div)`
   background: var(--color-white);
   box-shadow: var(--depth-2);
   overflow-y: visible;
@@ -105,10 +109,10 @@ const AboutCardContainer = styled.div`
     }
   }
 
-  img.avatar {
+  .avatar {
     width: 100px;
+    height: 100px;
     margin: -50px auto 0 auto;
-    height: auto;
   }
 
   .content {

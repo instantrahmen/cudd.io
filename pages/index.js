@@ -1,20 +1,32 @@
 import React from 'react';
 import Head from 'next/head';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 import Layout from '../components/Layout';
+import Avatar from '../components/Avatar';
+import {
+  fromLeft,
+  fromBelow,
+  generateAnimationProps,
+  springTransition,
+} from '../utils/variants';
 
-const avatar = '/images/Avatar.png';
 const Home = () => (
   <PageContainer>
     <Head>
       <title>Erika Cudd</title>
     </Head>
 
-    <img src={avatar} alt="Erika" className="avatar" />
+    <Avatar alt="Erika" className="avatar" />
     <div className="content">
-      <h1>Erika Cudd</h1>
-      <h2>Software Engineer</h2>
+      <motion.h1 {...generateAnimationProps(fromBelow)}>Erika Cudd</motion.h1>
+      <motion.h2
+        {...generateAnimationProps(fromBelow)}
+        transition={{ ...springTransition, delay: 0.2 }}
+      >
+        Software Engineer
+      </motion.h2>
     </div>
   </PageContainer>
 );
@@ -29,7 +41,7 @@ const PageContainer = styled(Layout)`
   text-align: center;
   .avatar {
     width: 200px;
-    height: auto;
+    height: 200px;
   }
 
   .content {

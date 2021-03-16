@@ -1,10 +1,40 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
+import Image from 'next/image';
+const avatarSrcSmall = '/images/Avatar-smaller.png';
 const avatarSrc = '/images/Avatar.png';
+import styled from 'styled-components';
+import {
+  fromAbove,
+  springTransition,
+  generateAnimationProps,
+} from '../utils/variants';
 
-const Avatar = ({ ...props }) => {
-  return <motion.img src={avatarSrc} {...props} />;
+const Avatar = ({ small, className, imageProps = {}, ...props }) => {
+  return (
+    <Figure
+      layoutId="avatar"
+      transition={springTransition}
+      className={className}
+      {...props}
+    >
+      <Image
+        layout="fill"
+        src={small ? avatarSrcSmall : avatarSrc}
+        {...imageProps}
+      />
+    </Figure>
+  );
 };
 
 export default Avatar;
+
+const Figure = styled(motion.figure)`
+  height: 100px;
+  width: 100px;
+  position: relative;
+
+  img {
+    object-fit: contain;
+  }
+`;

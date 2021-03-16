@@ -3,6 +3,13 @@ import styled from 'styled-components';
 import { Heading } from '@chakra-ui/react';
 import Layout from '../components/Layout';
 import AboutCard from '../components/AboutCard';
+import { motion } from 'framer-motion';
+import {
+  fromAbove,
+  fromBelow,
+  generateAnimationProps,
+  springTransition,
+} from '../utils/variants';
 
 const stackSvg = '/images/stack.svg';
 
@@ -12,14 +19,34 @@ const AboutPage = () => (
       <AboutCard></AboutCard>
 
       <div className="stack">
-        <Heading as="h2">Tech I use</Heading>
-        <img onDragStart={(e) => e.preventDefault()} src={stackSvg} alt="" />
+        <AnimatedH2
+          as="h2"
+          {...generateAnimationProps(fromAbove)}
+          transition={{
+            ...springTransition,
+            delay: 0.05,
+          }}
+        >
+          Tech I use
+        </AnimatedH2>
+        <motion.img
+          onDragStart={(e) => e.preventDefault()}
+          src={stackSvg}
+          alt=""
+          {...generateAnimationProps(fromBelow)}
+          transition={{
+            ...springTransition,
+            delay: 0.2,
+          }}
+        />
       </div>
     </div>
   </PageContainer>
 );
 
 export default AboutPage;
+
+const AnimatedH2 = motion(Heading);
 
 const PageContainer = styled(Layout)`
   display: flex;

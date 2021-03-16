@@ -4,10 +4,11 @@ import Head from 'next/head';
 import { ChakraProvider } from '@chakra-ui/react';
 import { GlobalStyles } from '../styles';
 import { theme } from '../styles/chakra-theme';
+import { AnimateSharedLayout } from 'framer-motion';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
+    <AnimateSharedLayout>
       <ChakraProvider theme={theme}>
         <Head>
           <link
@@ -40,7 +41,7 @@ function MyApp({ Component, pageProps }) {
         <GlobalStyles />
         <Component {...pageProps} />
       </ChakraProvider>
-    </>
+    </AnimateSharedLayout>
   );
 }
 
