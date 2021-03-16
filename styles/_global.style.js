@@ -21,6 +21,7 @@ export default css`
   }
 
   #__next {
+    background: black;
     h1,
     h2,
     h3,

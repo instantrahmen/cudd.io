@@ -9,9 +9,30 @@ export const fromAbove = {
   animate: { opacity: 1, y: 0 },
 };
 
+export const fadeIn = {
+  initial: { opacity: 0.5 },
+  animate: {
+    opacity: 1,
+    transition: {
+      duration: 0.3,
+    },
+  },
+};
+
 export const fromBelow = {
   initial: { opacity: 0, y: '100vh' },
-  animate: { opacity: 1, y: 0 },
+  animate: {
+    opacity: 1,
+    y: 0,
+  },
+};
+
+export const fromBelowWithTransition = {
+  ...fromBelow,
+  animate: {
+    ...fromBelow.animate,
+    transition: springTransition,
+  },
 };
 
 export const fromLeft = {

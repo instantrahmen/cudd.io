@@ -3,35 +3,40 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from './Link';
 import LogoImage from './Logo';
+import { useRouter } from 'next/router';
 
 const headerBg = '/images/header-bg.svg';
 
-const Header = ({ className }) => (
-  <>
-    <HeaderContainer bg={headerBg} className={` ${className}`}>
-      <Logo to="/">
-        <LogoImage className="logo" />
-      </Logo>
+const Header = ({ className }) => {
+  const router = useRouter();
 
-      <nav>
-        <ul>
-          <li>
-            <NavLink to="/">home</NavLink>
-          </li>
-          <li>
-            <NavLink to="/about">about</NavLink>
-          </li>
-          {/* <li>
-            <NavLink to="/">projects</NavLink>
-          </li>
-          <li>
-            <NavLink to="/">contact</NavLink>
+  return (
+    <>
+      <HeaderContainer bg={headerBg} className={` ${className}`}>
+        <Logo href="/">
+          <LogoImage className="logo" />
+        </Logo>
+
+        <nav>
+          <ul>
+            <li>
+              <NavLink href="/">home</NavLink>
+            </li>
+            <li>
+              <NavLink href="/about">about</NavLink>
+            </li>
+            <li>
+              <NavLink href="/projects">projects</NavLink>
+            </li>
+            {/* <li>
+            <NavLink href="/">contact</NavLink>
           </li> */}
-        </ul>
-      </nav>
-    </HeaderContainer>
-  </>
-);
+          </ul>
+        </nav>
+      </HeaderContainer>
+    </>
+  );
+};
 
 const NavLink = styled(Link)`
   color: var(--color-white);
@@ -40,7 +45,8 @@ const NavLink = styled(Link)`
   position: relative;
   transition: 250ms ease-out;
 
-  &::before {
+  &::before,
+  &::after {
     background: none;
     border-bottom: 2px solid ${lighten(0.1, '#FF80CC')};
     content: '';
@@ -56,8 +62,15 @@ const NavLink = styled(Link)`
   &:hover {
     color: ${lighten(0.1, '#FF80CC')};
 
-    &::before {
+    &::after {
       transition: 250ms ease-in;
+      width: 100%;
+    }
+  }
+
+  &.active {
+    &::before {
+      border-bottom: 2px solid var(--color-white);
       width: 100%;
     }
   }

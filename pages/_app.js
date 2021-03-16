@@ -5,6 +5,7 @@ import { ChakraProvider } from '@chakra-ui/react';
 import { GlobalStyles } from '../styles';
 import { theme } from '../styles/chakra-theme';
 import { AnimateSharedLayout } from 'framer-motion';
+import useScrollDirection from '../hooks/useScrollDirection';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -37,6 +38,7 @@ function MyApp({ Component, pageProps }) {
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400&family=Raleway&display=swap"
             rel="stylesheet"
           />
+          <title>Erika Cudd - Software Engineer</title>
         </Head>
         <GlobalStyles />
         <Component {...pageProps} />

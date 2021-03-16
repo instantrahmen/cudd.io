@@ -21,6 +21,7 @@ const Avatar = ({ small, className, imageProps = {}, ...props }) => {
       <Image
         layout="fill"
         src={small ? avatarSrcSmall : avatarSrc}
+        priority
         {...imageProps}
       />
     </Figure>

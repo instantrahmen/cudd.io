@@ -1,9 +1,10 @@
 import React from 'react';
+import Image from 'next/image';
 import styled from 'styled-components';
 import Header from './Header';
-
 const backgroundImage = '/images/background.jpeg';
-
+import { motion } from 'framer-motion';
+import { fadeIn } from '../utils/variants';
 const Layout = ({ children, className }) => {
   return (
     <SiteContainer>
@@ -23,7 +24,10 @@ const SiteContainer = styled.div`
   justify-content: space-between;
   min-height: 100vh;
   height: 100vh;
-
+  /* background: black; */
+  & > * {
+    z-index: 1;
+  }
   main {
     flex: 1;
 
@@ -38,13 +42,13 @@ const SiteContainer = styled.div`
 const BackgroundImage = ({ src, ...props }) => {
   return (
     <BackgroundImageContainer {...props}>
-      <img src={src} className="bg"></img>
+      <Image priority layout="fill" src={src} className="bg"></Image>
     </BackgroundImageContainer>
   );
 };
 
-const BackgroundImageContainer = styled.div`
-  z-index: -1;
+const BackgroundImageContainer = styled.figure`
+  z-index: 0;
   position: fixed;
   left: 0;
   top: 0;
