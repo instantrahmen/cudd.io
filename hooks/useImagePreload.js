@@ -1,9 +1,10 @@
 import { useEffect } from 'react';
 
-const imageTemplate = {
-  src: 'http://placekitten.com/100/100',
-  width: 100,
-};
+// Image Template:
+// {
+//   src: 'http://placekitten.com/100/100',
+//   width: 100,
+// };
 
 export const useImagePreload = (
   imageUrls = [],

@@ -13,10 +13,10 @@ const ProjectCard = ({ project, ...props }) => {
   return (
     <ProjectCardContainer {...props}>
       <div className="header">
-        <ProjectPhoto aria-role="presentation" color={project.color}>
+        <ProjectPhoto role="presentation" color={project.color}>
           {project.photo && (
             <Image
-              aria-role="presentation"
+              role="presentation"
               priority
               layout="fill"
               src={project.photo}
