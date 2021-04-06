@@ -57,7 +57,7 @@ const IconLink = ({ href, icon, disabled = false, ...props }) => {
     <StyledIconButton
       href={href}
       className="styled-icon"
-      target="__blank"
+      target="_blank"
       disabled={disabled}
       {...props}
     >
