@@ -50,7 +50,7 @@ const PageContainer = styled(Layout)`
     max-width: 100%;
 
     display: grid;
-    grid-template-columns: repeat(auto-fill, 360px);
+    grid-template-columns: repeat(auto-fit, 360px);
     justify-content: space-evenly;
     grid-gap: 1rem;
 
