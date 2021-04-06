@@ -9,9 +9,11 @@ const Footer = () => {
       </div>
       <ul className="social-links">
         <FooterLink href="https://github.com/saltyNoodles">github</FooterLink>
-        <FooterLink href="https://github.com/saltyNoodles">twitter</FooterLink>
-        <FooterLink href="https://github.com/saltyNoodles">linkedIn</FooterLink>
-        <FooterLink href="https://github.com/saltyNoodles">résumé</FooterLink>
+        <FooterLink href="https://twitter.com/rahmen_dev">twitter</FooterLink>
+        <FooterLink href="https://www.linkedin.com/in/erika-cudd-08340495">
+          linkedIn
+        </FooterLink>
+        <FooterLink href="/files/erika-cudd-resume.pdf">résumé</FooterLink>
       </ul>
     </FooterContainer>
   );
@@ -19,7 +21,7 @@ const Footer = () => {
 
 const FooterLink = ({ href, children, ...props }) => (
   <li>
-    <a href={href} {...props}>
+    <a href={href} target="__blank" {...props}>
       {children}
     </a>
   </li>
