@@ -15,7 +15,12 @@ const ProjectCard = ({ project, ...props }) => {
       <div className="header">
         <ProjectPhoto aria-role="presentation" color={project.color}>
           {project.photo && (
-            <Image priority layout="fill" src={project.photo}></Image>
+            <Image
+              aria-role="presentation"
+              priority
+              layout="fill"
+              src={project.photo}
+            ></Image>
           )}
         </ProjectPhoto>
         <Heading as="h2">{project.name}</Heading>

@@ -42,7 +42,13 @@ const SiteContainer = styled.div`
 const BackgroundImage = ({ src, ...props }) => {
   return (
     <BackgroundImageContainer aria-role="presentation" {...props}>
-      <Image priority layout="fill" src={src} className="bg"></Image>
+      <Image
+        aria-role="presentation"
+        priority
+        layout="fill"
+        src={src}
+        className="bg"
+      ></Image>
     </BackgroundImageContainer>
   );
 };

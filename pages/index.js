@@ -18,7 +18,7 @@ const Home = () => (
       <title>Erika Cudd</title>
     </Head>
 
-    <Avatar alt="Erika" className="avatar" />
+    <Avatar className="avatar" />
     <div className="content">
       <motion.h1 {...generateAnimationProps(fromBelow)}>Erika Cudd</motion.h1>
       <motion.h2

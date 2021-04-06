@@ -16,13 +16,13 @@ const Avatar = ({ small, className, imageProps = {}, ...props }) => {
       layoutId="avatar"
       transition={springTransition}
       className={className}
-      alt="Erika Cudd"
       {...props}
     >
       <Image
         layout="fill"
         src={small ? avatarSrcSmall : avatarSrc}
         priority
+        alt="Erika"
         {...imageProps}
       />
     </Figure>
