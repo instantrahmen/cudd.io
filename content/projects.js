@@ -25,7 +25,7 @@ A discord bot created for a close friend of mine. Allows her to quickly manage c
       live: null,
       source: 'https://github.com/instantrahmen/MoonBot',
     },
-    tags: ['Node', 'Discord', 'discord.js'],
+    tags: ['Node', 'Sanity', 'Discord'],
   },
 
   // XMas App
