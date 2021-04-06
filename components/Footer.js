@@ -21,7 +21,7 @@ const Footer = () => {
 
 const FooterLink = ({ href, children, ...props }) => (
   <li>
-    <a href={href} target="_blank" {...props}>
+    <a href={href} target="_blank" rel="noreferrer" {...props}>
       {children}
     </a>
   </li>

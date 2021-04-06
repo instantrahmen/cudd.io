@@ -59,6 +59,7 @@ const IconLink = ({ href, icon, disabled = false, ...props }) => {
       className="styled-icon"
       target="_blank"
       disabled={disabled}
+      rel="noreferrer"
       {...props}
     >
       {icon}

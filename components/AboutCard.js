@@ -55,6 +55,7 @@ const IconLink = ({ href, icon, ...props }) => {
       href={href}
       className="styled-icon"
       target="_blank"
+      rel="noreferrer"
       {...props}
     >
       {icon}
