@@ -3,11 +3,11 @@ import Image from 'next/image';
 import styled from 'styled-components';
 import Header from './Header';
 import Footer from './Footer';
-import { useImagePreload } from '../hooks/useImagePreload';
+// import { useImagePreload } from '../hooks/useImagePreload';
 const backgroundImage = '/images/background.jpeg';
 
 const Layout = ({ children, className }) => {
-  useImagePreload(['/images/Avatar.png', '/images/Avatar-smaller.png'], {});
+  // useImagePreload(['/images/Avatar.png', '/images/Avatar-smaller.png'], {});
 
   return (
     <SiteContainer>
