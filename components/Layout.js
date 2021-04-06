@@ -3,12 +3,9 @@ import Image from 'next/image';
 import styled from 'styled-components';
 import Header from './Header';
 import Footer from './Footer';
-// import { useImagePreload } from '../hooks/useImagePreload';
 const backgroundImage = '/images/background.jpeg';
 
 const Layout = ({ children, className }) => {
-  // useImagePreload(['/images/Avatar.png', '/images/Avatar-smaller.png'], {});
-
   return (
     <SiteContainer>
       <BackgroundImage src={backgroundImage}></BackgroundImage>
@@ -44,7 +41,7 @@ const SiteContainer = styled.div`
 
 const BackgroundImage = ({ src, ...props }) => {
   return (
-    <BackgroundImageContainer {...props}>
+    <BackgroundImageContainer aria-role="presentation" {...props}>
       <Image priority layout="fill" src={src} className="bg"></Image>
     </BackgroundImageContainer>
   );

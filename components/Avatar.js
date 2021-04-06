@@ -16,6 +16,7 @@ const Avatar = ({ small, className, imageProps = {}, ...props }) => {
       layoutId="avatar"
       transition={springTransition}
       className={className}
+      alt="Erika Cudd"
       {...props}
     >
       <Image

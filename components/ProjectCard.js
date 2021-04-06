@@ -13,7 +13,7 @@ const ProjectCard = ({ project, ...props }) => {
   return (
     <ProjectCardContainer {...props}>
       <div className="header">
-        <ProjectPhoto color={project.color}>
+        <ProjectPhoto aria-role="presentation" color={project.color}>
           {project.photo && (
             <Image priority layout="fill" src={project.photo}></Image>
           )}
