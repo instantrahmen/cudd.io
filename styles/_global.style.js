@@ -62,10 +62,4 @@ export default css`
     color: var(--color-blue);
     text-decoration: none;
   }
-
-  footer {
-    background: none;
-    padding: 1rem;
-    color: var(--color-white);
-  }
 `;
