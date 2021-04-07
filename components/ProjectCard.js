@@ -29,11 +29,21 @@ const ProjectCard = ({ project, ...props }) => {
             href={project.links.live}
             icon={<FaExternalLinkAlt />}
             disabled={!project.links.live}
+            aria-label={
+              !!project.links.live
+                ? `Live version of ${project.name}`
+                : `Live link not available for ${project.name}`
+            }
           ></IconLink>
           <IconLink
             href={project.links.source}
             icon={<FaGithub />}
             disabled={!project.links.source}
+            aria-label={
+              !!project.links.live
+                ? `${project.name} source code`
+                : `Source code link not available for ${project.name}`
+            }
           ></IconLink>
         </ButtonGroup>
       </div>
@@ -48,7 +58,7 @@ const ProjectCard = ({ project, ...props }) => {
 
       <ul className="tags">
         {project.tags.map((tag) => (
-          <div className="tag">{tag}</div>
+          <li className="tag">{tag}</li>
         ))}
       </ul>
     </ProjectCardContainer>
