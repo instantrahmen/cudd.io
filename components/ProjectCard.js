@@ -103,7 +103,7 @@ const StyledIconButton = styled.a`
   }
 `;
 
-const ProjectCardContainer = styled.div`
+const ProjectCardContainer = styled.article`
   background: var(--color-white);
   box-shadow: var(--depth-2);
   overflow-y: visible;

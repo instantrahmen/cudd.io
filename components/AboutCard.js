@@ -50,7 +50,6 @@ export default AboutCard;
 
 const IconLink = ({ href, icon, ...props }) => {
   return (
-    // <Link href={href}>
     <StyledIconButton
       href={href}
       className="styled-icon"
@@ -60,7 +59,6 @@ const IconLink = ({ href, icon, ...props }) => {
     >
       {icon}
     </StyledIconButton>
-    // </Link>
   );
 };
 

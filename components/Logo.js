@@ -23,7 +23,6 @@ const Logo = ({ ...props }) => {
       height="150"
       fill="none"
       viewBox="0 0 142 150"
-      alt="Ramen Logo"
       onHoverStart={() => {
         setOutlineColor(validOutlineColors.hover);
         setFillColor(validFillColors.hover);

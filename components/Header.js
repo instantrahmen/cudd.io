@@ -7,7 +7,6 @@ import {
   IconButton,
   Drawer,
   DrawerBody,
-  DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
@@ -38,9 +37,6 @@ const Header = ({ className }) => {
   // const [menuOpen, setMenuOpen] = useState(false);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef();
-  // const toggleMenu = (e, value = !menuOpen) => {
-  //   setMenuOpen((__open) => value);
-  // };
 
   return (
     <>
@@ -55,8 +51,8 @@ const Header = ({ className }) => {
         className={` ${className}`}
         menuOpen={isOpen}
       >
-        <Logo href="/">
-          <LogoImage className="logo" />
+        <Logo href="/" aria-label="Home Link">
+          <LogoImage className="logo" alt="Ramen Logo" />
         </Logo>
 
         <IconButton
@@ -65,6 +61,7 @@ const Header = ({ className }) => {
           icon={<HamburgerIcon />}
           className="menu-button"
           onClick={onOpen}
+          aria-label="Open navigation menu"
         ></IconButton>
         <nav>
           <ul>
