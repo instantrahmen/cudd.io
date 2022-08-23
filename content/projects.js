@@ -9,13 +9,12 @@ export default [
 A cross platform, web-based comic reader. Supports .cbz and .cbr files, LTR and RTL reading directions, syncing reading position across multiple devices, etc. 
 </p>
 <p>
-Works on Android, iOS, and web. Is a PWA so can be installed locally and used offline.
-*** 
-Will likely be open sourced when it's ready for release, as well as released on Android and iOS App Stores. 
+Works on Android, iOS, and web. Is a PWA so can be installed locally and used offline.   
 </p>
+Note: Will likely be open sourced when it's ready for release, as well as released on Android and iOS App Stores. 
       `,
     links: {},
-    tags: ['Sveltekit', 'Framework7', 'TypeScript'],
+    tags: ['SvelteKit', 'Framework7', 'TypeScript'],
   },
 
   // HelperBot
@@ -31,7 +30,10 @@ Will likely be open sourced when it's ready for release, as well as released on 
   Written in Node using Discord.js and the Discord API. Has a Fastify API and user profile support is in the works along with an admin panel. 
 </p>
       `,
-    links: {},
+    links: {
+      live: null,
+      source: 'https://github.com/instantrahmen/HelperBot',
+    },
     tags: ['Node', 'Discord.js', 'TypeScript'],
   },
 
