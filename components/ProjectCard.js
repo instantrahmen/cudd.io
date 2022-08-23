@@ -5,7 +5,7 @@ import { ButtonGroup, Heading } from '@chakra-ui/react';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { fromBelow } from '../utils/variants';
-import marked from 'marked';
+import { marked } from 'marked';
 
 const ProjectCard = ({ project, ...props }) => {
   const descriptionHtml = marked(project.description);
