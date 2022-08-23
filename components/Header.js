@@ -168,10 +168,10 @@ const NavLink = styled(Link)`
 `;
 
 const HeaderContainer = styled.header`
-  position: relative;
+  position: fixed;
   background-size: 100% auto;
   overflow: visible;
-
+  width: 100vw;
   padding: 1.3rem;
   padding-bottom: 1.5rem;
   display: flex;
@@ -179,6 +179,9 @@ const HeaderContainer = styled.header`
   justify-content: flex-end;
   background: url(${({ bg }) => bg});
   background-size: 100% 100%;
+  z-index: 10;
+  /* box-shadow: var(--depth-2); */
+  filter: drop-shadow(0 3px 6px #151115);
 
   nav {
     * {

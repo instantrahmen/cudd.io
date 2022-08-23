@@ -3,8 +3,6 @@ import Image from 'next/image';
 import styled, { css } from 'styled-components';
 import { ButtonGroup, Heading } from '@chakra-ui/react';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
-import { motion } from 'framer-motion';
-import { fromBelow } from '../utils/variants';
 import { marked } from 'marked';
 
 const ProjectCard = ({ project, ...props }) => {

@@ -5,6 +5,7 @@ export default css`
     /* Colors */
     --color-blue: #56ccf2;
     --color-pink: #ff80cc;
+    --color-darker-pink: #e063c1;
     --color-white: #efefef;
     --color-black: #121212;
     --color-darkest-grey: #202020;
