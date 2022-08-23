@@ -36,7 +36,12 @@ const Figure = styled(motion.figure)`
   width: 100px;
   position: relative;
 
+  span {
+    overflow: visible !important;
+  }
+
   img {
     object-fit: contain;
+    filter: drop-shadow(1px 1px 1px #212);
   }
 `;

@@ -75,6 +75,7 @@ const StyledIconButton = styled.a`
 
     &:hover {
       color: var(--color-secondary);
+      filter: drop-shadow(0px 0px 1px #212);
     }
     &:focus {
       outline: none;
@@ -104,6 +105,7 @@ const AboutCardContainer = styled(motion.div)`
 
   .header {
     text-align: center;
+
     h2 {
       color: var(--color-primary);
       font-weight: 500;
