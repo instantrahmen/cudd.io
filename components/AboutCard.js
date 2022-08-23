@@ -107,6 +107,7 @@ const AboutCardContainer = styled(motion.div)`
     h2 {
       color: var(--color-primary);
       font-weight: 500;
+      text-shadow: 1px 1px 1px #212;
     }
   }
 

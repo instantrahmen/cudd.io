@@ -184,6 +184,7 @@ const ProjectCardContainer = styled.article`
 
     .tag {
       color: white;
+      text-shadow: 1px 1px 1px #212;
       background: var(--color-primary);
       padding: 0.3rem;
       transition: 150ms ease-in-out;

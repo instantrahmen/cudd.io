@@ -128,7 +128,7 @@ const MenuDrawerWrapper = styled.div`
 
 const NavLink = styled(Link)`
   color: var(--color-white);
-  text-shadow: 1px 1px 2px #202;
+  text-shadow: 1px 1px 1px #212;
   font-size: 1.3rem;
   font-family: var(--font-header);
   position: relative;
@@ -138,8 +138,10 @@ const NavLink = styled(Link)`
   &::after {
     background: none;
     border-bottom: 2px solid ${lighten(0.1, '#FF80CC')};
+    box-shadow: 1px 1px 1px #212;
     content: '';
-    height: 100%;
+    height: 2px;
+    margin-top: 1.5rem;
     left: 0%;
     pointer-events: none;
     position: absolute;
