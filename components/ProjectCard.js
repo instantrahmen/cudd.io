@@ -58,7 +58,9 @@ const ProjectCard = ({ project, ...props }) => {
 
       <ul className="tags">
         {project.tags.map((tag) => (
-          <li className="tag">{tag}</li>
+          <li className="tag" key={`project-${project.name}-tag-${tag}`}>
+            {tag}
+          </li>
         ))}
       </ul>
     </ProjectCardContainer>
