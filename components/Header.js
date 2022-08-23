@@ -111,6 +111,7 @@ const MenuDrawerWrapper = styled.div`
   background: black !important;
   color: white !important;
   text-align: center;
+
   ul,
   li {
     list-style: none !important;
@@ -124,8 +125,10 @@ const MenuDrawerWrapper = styled.div`
     background: #12121223;
   }
 `;
+
 const NavLink = styled(Link)`
   color: var(--color-white);
+  text-shadow: 1px 1px 2px #202;
   font-size: 1.3rem;
   font-family: var(--font-header);
   position: relative;

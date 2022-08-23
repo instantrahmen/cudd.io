@@ -33,7 +33,7 @@ const AboutCard = () => {
       <div className="content">
         <p>
           Hi, my name is Erika and I’m a full-stack software developer based out
-          of Chattanooga, TN with a strong focus on the front end. I have 3
+          of Chattanooga, TN with a strong focus on the front end. I have 4
           years of professional experience and have worked on many large
           projects with teams both large and small.
         </p>
@@ -90,11 +90,13 @@ const AboutCardContainer = styled(motion.div)`
   font-size: 1.1rem;
   max-width: 100%;
   width: 360px;
-  min-height: 70vh;
-  max-height: 90vh;
+  height: 100%;
+  min-height: 365px;
+  max-height: 500px;
   color: var(--color-darkest-grey);
   box-sizing: border-box;
   position: relative;
+  /* margin: 1rem; */
 
   * {
     box-sizing: border-box;

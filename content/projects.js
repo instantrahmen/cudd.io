@@ -1,17 +1,38 @@
 export default [
-  // Tsukimoon Website
+  // Bukku App
   {
-    name: 'Tsukimoon.net',
-    photo: '/images/projects/tsukimoon.net.png',
+    name: 'Bukku - Comic Book Reader',
+    photo: '/images/projects/bukku-darkmode.png',
     description: `
-A website created for my best friend and VTuber Tsukimoon. 
-It was built in Gatsby and uses a Sanity backend so she can update the content herself easily without having to rely on me to make changes for her.
+<center><strong>[WIP]</strong></center>
+<p>
+A cross platform, web-based comic reader. Supports .cbz and .cbr files, LTR and RTL reading directions, syncing reading position across multiple devices, etc. 
+</p>
+<p>
+Works on Android, iOS, and web. Is a PWA so can be installed locally and used offline.
+*** 
+Will likely be open sourced when it's ready for release, as well as released on Android and iOS App Stores. 
+</p>
       `,
-    links: {
-      live: 'https://tsukimoon.net',
-      source: 'https://github.com/instantrahmen/tsukimoon-website',
-    },
-    tags: ['React', 'Sanity', 'Gatsby'],
+    links: {},
+    tags: ['Sveltekit', 'Framework7', 'TypeScript'],
+  },
+
+  // HelperBot
+
+  {
+    name: 'HelperBot',
+    photo: '/images/projects/helperbot.png',
+    description: `
+<p>
+  A general-purpose private Discord bot with personality. Supports music playback, a DnD Dice Roller, moderation features, and responds to general questions in a fun and engaging manner. 
+</p>
+<p>
+  Written in Node using Discord.js and the Discord API. Has a Fastify API and user profile support is in the works along with an admin panel. 
+</p>
+      `,
+    links: {},
+    tags: ['Node', 'Discord.js', 'TypeScript'],
   },
 
   // Convention Center App
@@ -19,8 +40,8 @@ It was built in Gatsby and uses a Sanity backend so she can update the content h
     name: 'Chattanooga Convention Center Virtual Walkthrough',
     photo: '/images/projects/convention-center.png',
     description: `
-An interface created for the Chattanooga Convention Center that allows potential clients to see rooms before they rent them. Created as an SPA in React, using both Matterport and Three.js to show the rooms. 
-  `,
+A specialized React SPA created for the Chattanooga Convention Center while I was working at PointsMap. Uses a combination of Matterport and A-Frame to create an interactive overview of all rooms available for renting out with detailed information about each. 
+    `,
     links: {
       live: 'https://pointsmap.github.io/matterport-minimap/',
       source: null,
@@ -34,31 +55,28 @@ An interface created for the Chattanooga Convention Center that allows potential
     photo: '/images/projects/moonbot.png',
 
     description: `
-A discord bot also created for Tsuki. Allows her to quickly manage commands in a Sanity backend. Uses discord.js to make interfacing with the Discord API easier.
+A specialized Discord Bot commissioned for the no-longer-active Twitch streamer TsukiMoon and her community. Uses Node and the Discord API and allows admins to log into an admin panel and create custom commands in with an easy EJS-like syntax. 
   `,
     links: {
       live: null,
       source: 'https://github.com/instantrahmen/MoonBot',
     },
-    tags: ['Node', 'Sanity', 'Discord'],
+    tags: ['Node', 'Sanity', 'Discord.js'],
   },
 
   // XMas App
   {
     name: 'Christmas Scavenger Hunt for VRMedia Pros',
     photo: '/images/projects/xmas-project.png',
-    description: /*md*/ `
+    description: `
 <p>
 A virtual scavenger hunt created in Next.js using the Matterport API.  
 </p>
-<br />
-
 <p>
 The team hid items throughout a house and took 360 scans of said house.
 The goal is to find all objects hidden around the house. 
 It won't accept an answer unless the item is in view.
 </p>
-<br />
 <p>
 The whole project went from concept to production in the span of 2-3 weeks.
 </p>

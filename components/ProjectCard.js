@@ -121,8 +121,9 @@ const ProjectCardContainer = styled.article`
   max-width: 100%;
   width: 100%;
   max-width: 360px;
-  min-height: 70vh;
-  max-height: 90vh;
+  height: 100%;
+  min-height: 365px;
+  max-height: 1200px;
   color: var(--color-darkest-grey);
   box-sizing: border-box;
   position: relative;
@@ -161,6 +162,11 @@ const ProjectCardContainer = styled.article`
   .content {
     margin: 1.5rem 2rem;
     flex: 1;
+
+    p {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
   }
 
   .tags {
