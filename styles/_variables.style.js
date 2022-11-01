@@ -39,5 +39,7 @@ export default css`
     // Fonts
     --font-header: 'Montserrat', sans-serif;
     --font-body: 'Raleway', sans-serif;
+
+    --card-border-radius: 20px;
   }
 `;

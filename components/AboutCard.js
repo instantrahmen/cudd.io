@@ -63,7 +63,6 @@ const IconLink = ({ href, icon, ...props }) => {
 };
 
 const StyledIconButton = styled.a`
-  /* Include the class to make it more specific. Otherwise won't */
   &.styled-icon {
     background: none;
     color: var(--color-dark-grey);
@@ -97,6 +96,7 @@ const AboutCardContainer = styled(motion.div)`
   color: var(--color-darkest-grey);
   box-sizing: border-box;
   position: relative;
+  border-radius: var(--card-border-radius);
   /* margin: 1rem; */
 
   * {

@@ -129,6 +129,14 @@ const ProjectCardContainer = styled.article`
   position: relative;
   display: flex;
   flex-direction: column;
+  border-radius: var(--card-border-radius);
+  overflow: hidden;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) calc(100% - 100px),
+    rgba(0, 0, 0, 1) calc(100% - 100px)
+  );
 
   * {
     box-sizing: border-box;
@@ -188,9 +196,24 @@ const ProjectCardContainer = styled.article`
       background: var(--color-primary);
       padding: 0.3rem;
       transition: 150ms ease-in-out;
+      border-radius: var(--card-border-radius);
+      overflow: hidden;
+      --tag-radius: calc(var(--card-border-radius) / 2);
+      border-radius: 0 0 0 0;
+      border-top-right-radius: var(--tag-radius);
+      border-top-left-radius: var(--tag-radius);
+
+      /* border-radius: var(--tag-radius) var(--tag-radius) 0 0; */
 
       &:hover {
         background: var(--color-secondary);
+      }
+      &:first-child {
+        border-top-left-radius: 0;
+      }
+
+      &:last-child {
+        border-top-right-radius: 0px !important;
       }
     }
   }

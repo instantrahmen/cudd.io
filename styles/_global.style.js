@@ -6,6 +6,7 @@ export default css`
     height: 100%;
     /* z-index fix so the background image (z-index: -1;) appears above this */
     z-index: -5;
+    -webkit-font-smoothing: antialiased;
     background: var(--color-blue);
   }
 
