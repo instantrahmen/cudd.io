@@ -1,9 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-const avatarSrcSmall = '/images/Avatar-smaller.png';
-const avatarSrc = '/images/Avatar.png';
+const avatarSrcSmall = '/images/Avatar-2.png';
+const avatarSrc = '/images/avatar-2.png';
 import styled from 'styled-components';
+
 import {
   fromAbove,
   springTransition,
@@ -20,7 +21,8 @@ const Avatar = ({ small, className, imageProps = {}, ...props }) => {
     >
       <Image
         layout="fill"
-        src={small ? avatarSrcSmall : avatarSrc}
+        // src={small ? avatarSrcSmall : avatarSrc}
+        src={avatarSrc}
         priority
         alt="Erika"
         {...imageProps}
